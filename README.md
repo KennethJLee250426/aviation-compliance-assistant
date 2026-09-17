@@ -35,6 +35,16 @@ aviation-rag-poc/
 ├── regulatory_chroma_db/ # Generated vector store (gitignored)
 └── requirements.txt
 
+## Data Sources
+
+Regulatory documents in the `regulations/` directory were sourced from the official public websites of the respective authorities:
+
+- **EASA** — easa.europa.eu
+- **CAAS** — caas.gov.sg
+- **CAAC** — caac.gov.cn
+
+These documents remain subject to the original terms of use published by their respective authorities. This repository's MIT license applies only to the application code (`app_api.py`, `ingest.py`, `templates/`), not to the regulatory documents themselves.
+
 
 ## Setup
 
