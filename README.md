@@ -1,4 +1,4 @@
-# Aviation Compliance Assistant
+# Aviation Compliance Assistant Version 1
 
 A local, privacy-preserving RAG (Retrieval-Augmented Generation) application for querying multi-authority aviation regulatory documents — EASA, CAAS, and CAAC — using a locally hosted LLM.
 
