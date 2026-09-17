@@ -78,6 +78,38 @@ uvicorn app_api:app --reload
 
 Open `http://127.0.0.1:8000` in your browser.
 
+## Using a Different Model
+
+This project defaults to `qwen2.5:7b` via Ollama, but you can swap in any Ollama-compatible model.
+
+1. Pull your chosen model:
+```bash
+   ollama pull <model-name>
+```
+
+2. Update the model name in `app_api.py`:
+```python
+   llm = ChatOllama(model="<model-name>", temperature=0.0)
+```
+
+3. Restart the app.
+
+**Model size guidance:**
+- **CPU-only environments** (e.g. cloud dev containers, no dedicated GPU): smaller models like `qwen2.5:1.5b` or `phi3:mini` run noticeably faster, with some trade-off in answer quality.
+- **GPU-equipped machines**: `qwen2.5:7b` or larger models will run significantly faster and give more accurate answers, especially for multi-part or comparative compliance questions.
+
+You can browse available models at [ollama.com/library](https://ollama.com/library).
+
+## Swapping the Embedding Model
+
+Document embeddings use `all-MiniLM-L6-v2` (via HuggingFace) by default — lightweight and fast, suitable for most hardware. To use a different embedding model, update both `app_api.py` and `ingest.py`:
+
+```python
+embeddings = HuggingFaceEmbeddings(model_name="<embedding-model-name>")
+```
+
+Note: if you change the embedding model, you'll need to re-run `ingest.py` to rebuild `regulatory_chroma_db/`, since embeddings from different models aren't compatible with each other.
+
 ## Notes
 
 - Regulatory source documents included in `regulations/` are publicly published materials from EASA, CAAS, and CAAC.
