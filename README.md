@@ -39,9 +39,9 @@ aviation-rag-poc/
 
 Regulatory documents in the `regulations/` directory were sourced from the official public websites of the respective authorities:
 
-- **EASA** — easa.europa.eu
-- **CAAS** — caas.gov.sg
-- **CAAC** — caac.gov.cn
+- **EASA** — [easa.europa.eu](https://www.easa.europa.eu/en/home)
+- **CAAS** — [caas.gov.sg](https://www.caas.gov.sg/resources/regulatory-requirements-and-guidelines/aircraft-maintenance-design-production/)
+- **CAAC** — [caac.gov.cn](https://www.caac.gov.cn/English/Regulations/)
 
 These documents remain subject to the original terms of use published by their respective authorities. This repository's MIT license applies only to the application code (`app_api.py`, `ingest.py`, `templates/`), not to the regulatory documents themselves.
 
