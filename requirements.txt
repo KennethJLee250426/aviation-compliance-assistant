@@ -1,8 +1,0 @@
-streamlit
-langchain-community
-langchain-huggingface
-chromadb
-sentence-transformers
-transformers
---extra-index-url https://download.pytorch.org/whl/cpu
-torch
