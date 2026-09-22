@@ -49,6 +49,16 @@ These documents remain subject to the original terms of use published by their r
 ## Setup
 
 ### Prerequisites
+
+## Running the RAG Pipeline (PowerShell)
+
+Follow these step-by-step instructions to set up and run the existing Retrieval-Augmented Generation (RAG) system using PowerShell.
+
+### 1. Navigate to Project Directory
+Open PowerShell and change your directory to the project root folder:
+```powershell
+cd "C:\path\to\your\rag-project"
+
 - Python 3.10+
 - [Ollama](https://ollama.com) installed locally
 - A pulled Ollama model (e.g. `ollama pull qwen2.5:7b`)
